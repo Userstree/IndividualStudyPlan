@@ -40,7 +40,7 @@ struct ContentView: View {
                     Spacer()
                     Button (
                         action: {
-                            downloadFile(modelData.planData.DocumentURL)
+                            savePdf(urlString: modelData.planData.DocumentURL, fileName: "Downloaded")
                         },
                         label: {
                             Image(systemName: "arrow.down.doc")
@@ -52,10 +52,11 @@ struct ContentView: View {
                     )
                     Spacer()
                 }
-                .padding(.top, 5)
+                .padding(.top, 45)
                 .padding(.bottom, 20)
                 .frame(maxWidth: .infinity)
                 .background(LinearGradient(colors: [Color.red.opacity(0.9), Color.red.opacity(0.6)], startPoint: .leading, endPoint: .trailing))
+                .ignoresSafeArea()
                 
                 VStack {
                     Text("Индивидуальный учебный план на \(modelData.planData.AcademicYear)")
@@ -121,6 +122,13 @@ struct ContentView: View {
                 
                 Table(tab: $currentTab, disciplines: modelData.planData.Semesters[currentTab].Disciplines)
                 
+                Button {
+                    showSavedPdf(url: modelData.planData.DocumentURL, fileName: "Downloaded")
+                } label: {
+                    Text("Show downloaded file")
+                }
+
+                Spacer()
             }
             .navigationBarHidden(true)
         }

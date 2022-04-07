@@ -14,6 +14,8 @@ struct IndividualStudyPlanApp: App {
         WindowGroup {
             IndividualPlan()
                 .environmentObject(modelData)
+                .statusBar(hidden: true)
+                .preferredColorScheme(.light)
         }
     }
 }

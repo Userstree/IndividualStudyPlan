@@ -21,6 +21,7 @@ struct IndividualPlan: View {
             .background(Color.red)
             .foregroundColor(.white)
             .cornerRadius(8)
+
         }
     }
 }
