@@ -122,12 +122,6 @@ struct ContentView: View {
                 
                 Table(tab: $currentTab, disciplines: modelData.planData.Semesters[currentTab].Disciplines)
                 
-                Button {
-                    showSavedPdf(url: modelData.planData.DocumentURL, fileName: "Downloaded")
-                } label: {
-                    Text("Show downloaded file")
-                }
-
                 Spacer()
             }
             .navigationBarHidden(true)
@@ -184,7 +178,7 @@ struct Table: View {
                             GeometryReader { proxy in
                                 Color.clear
                                     .onAppear {
-                                        heights![0] = proxy.size.height + 25
+                                        heights![0] = proxy.size.height + 23
                                     }
                             }
                         )
@@ -257,168 +251,33 @@ struct Table: View {
                     {
                         HStack(spacing: 0)
                         {
-                            VStack(spacing: 0)
-                            {
-                                Text(NSLocalizedString("Lecture", comment: ""))
-                                    .frame(width: 80, height: heights![0])
-                                    .border(Color.gray,width: 0.2)
-                                    .foregroundColor(Color.gray)
-                                
-                                HStack(spacing: 0)
+                            ForEach(0..<disciplines.count) { column in
+                                VStack(spacing: 0)
                                 {
-                                    Text(disciplines[0].Lesson[0].RealHours)
-                                        .foregroundColor(Color.green)
-                                    Text(" / ")
-                                        .foregroundColor(.gray)
-                                    Text(disciplines[0].Lesson[0].Hours)
-                                        .foregroundColor(disciplines[0].Lesson[0].RealHours == disciplines[0].Lesson[0].Hours ? .green : .red)
+                                    Text(column == 0 ? NSLocalizedString("Lecture", comment: "") :
+                                            column == 1 ? NSLocalizedString("Seminar", comment: "") : NSLocalizedString("Lab.", comment: ""))
+                                        .frame(width: 80, height: heights![0])
+                                        .border(Color.gray,width: 0.2)
+                                        .foregroundColor(Color.gray)
+
+                                    ForEach(0..<disciplines[column].Lesson.count) { row in
+                                        HStack(spacing: 0)
+                                        {
+                                            Text(disciplines[row].Lesson[column].RealHours)
+                                                .foregroundColor(Color.green)
+                                            Text(" / ")
+                                                .foregroundColor(.gray)
+                                            Text(disciplines[row].Lesson[column].Hours)
+                                                .foregroundColor(disciplines[row].Lesson[column].RealHours == disciplines[row].Lesson[column].Hours ? .green : .red)
+                                        }
+                                        .frame(width: 80, height: heights![row + 1])
+                                        .border(Color.gray,width: 0.2)
+                                    }
+                                    Spacer()
                                 }
-                                .frame(width: 80, height: heights![1])
-                                .border(Color.gray,width: 0.2)
-                                
-                                
-                                HStack(spacing: 0)
-                                {
-                                    Text(disciplines[1].Lesson[0].RealHours)
-                                        .foregroundColor(Color.green)
-                                    Text(" / ")
-                                        .foregroundColor(.gray)
-                                    Text(disciplines[1].Lesson[0].Hours)
-                                        .foregroundColor(disciplines[1].Lesson[0].RealHours == disciplines[1].Lesson[0].Hours ? .green : .red)
-                                }
-                                .frame(width: 80, height: heights![2])
-                                .border(Color.gray,width: 0.2)
-                                
-                                HStack(spacing: 0)
-                                {
-                                    Text(disciplines[2].Lesson[0].RealHours)
-                                        .foregroundColor(Color.green)
-                                    Text(" / ")
-                                        .foregroundColor(.gray)
-                                    Text(disciplines[2].Lesson[0].Hours)
-                                        .foregroundColor(disciplines[2].Lesson[0].RealHours == disciplines[2].Lesson[0].Hours ? .green : .red)
-                                }
-                                .frame(width: 80, height: heights![3])
-                                .border(Color.gray,width: 0.2)
-                                Spacer()
                             }
-                            
-                            VStack(spacing: 0)
-                            {
-                                Text(NSLocalizedString("Seminar", comment: ""))
-                                    .frame(width: 80, height: heights![0])
-                                    .border(Color.gray,width: 0.2)
-                                    .foregroundColor(Color.gray)
-                                
-                                HStack(spacing: 0)
-                                {
-                                    Text(disciplines[0].Lesson[1].RealHours)
-                                        .foregroundColor(Color.green)
-                                    Text(" / ")
-                                        .foregroundColor(.gray)
-                                    Text(disciplines[0].Lesson[1].Hours)
-                                        .foregroundColor(disciplines[0].Lesson[1].RealHours == disciplines[0].Lesson[1].Hours ? .green : .red)
-                                }
-                                .frame(width: 80, height: heights![1])
-                                .border(Color.gray,width: 0.2)
-                                
-                                HStack(spacing: 0)
-                                {
-                                    Text(disciplines[1].Lesson[1].RealHours)
-                                        .foregroundColor(Color.green)
-                                    Text(" / ")
-                                        .foregroundColor(.gray)
-                                    Text(disciplines[1].Lesson[1].Hours)
-                                        .foregroundColor(disciplines[1].Lesson[1].RealHours == disciplines[1].Lesson[1].Hours ? .green : .red)
-                                }
-                                .frame(width: 80, height: heights![2])
-                                .border(Color.gray,width: 0.2)
-                                
-                                HStack(spacing: 0)
-                                {
-                                    Text(disciplines[2].Lesson[1].RealHours)
-                                        .foregroundColor(Color.green)
-                                    Text(" / ")
-                                        .foregroundColor(.gray)
-                                    Text(disciplines[2].Lesson[1].Hours)
-                                        .foregroundColor(disciplines[2].Lesson[1].RealHours == disciplines[2].Lesson[1].Hours ? .green : .red)
-                                }
-                                .frame(width: 80, height: heights![3])
-                                .border(Color.gray,width: 0.2)
-                                Spacer()
-                            }
-                            
-                            VStack(spacing: 0)
-                            {
-                                Text(NSLocalizedString("Lab.", comment: ""))
-                                    .frame(width: 80, height: heights![0])
-                                    .border(Color.gray,width: 0.2)
-                                    .foregroundColor(Color.gray)
-                                
-                                HStack(spacing: 0)
-                                {
-                                    Text(disciplines[0].Lesson[2].RealHours)
-                                        .foregroundColor(Color.green)
-                                    Text(" / ")
-                                        .foregroundColor(.gray)
-                                    Text(disciplines[0].Lesson[2].Hours)
-                                        .foregroundColor(disciplines[0].Lesson[2].RealHours == disciplines[0].Lesson[2].Hours ? .green : .red)
-                                }
-                                .frame(width: 80, height: heights![1])
-                                .border(Color.gray,width: 0.2)
-                                
-                                HStack(spacing: 0)
-                                {
-                                    Text(disciplines[1].Lesson[2].RealHours)
-                                        .foregroundColor(Color.green)
-                                    Text(" / ")
-                                        .foregroundColor(.gray)
-                                    Text(disciplines[1].Lesson[2].Hours)
-                                        .foregroundColor(disciplines[1].Lesson[2].RealHours == disciplines[1].Lesson[2].Hours ? .green : .red)
-                                }
-                                .frame(width: 80, height: heights![2])
-                                .border(Color.gray,width: 0.2)
-                                
-//                                HStack(spacing: 0)
-//                                {
-//                                    Text(disciplines[2].Lesson[1].RealHours)
-//                                        .foregroundColor(Color.green)
-//                                    Text(" / ")
-//                                        .foregroundColor(.gray)
-//                                    Text(disciplines[2].Lesson[1].Hours)
-//                                        .foregroundColor(disciplines[1].Lesson[2].RealHours == disciplines[1].Lesson[2].Hours ? .green : .red)
-//                                }
-//                                    .frame(width: 80, height: heights![3])
-//                                    .border(Color.gray,width: 0.2)
-                                Spacer()
-                            }
-                            
-//                            ForEach(0..<2) { num in
-//                                VStack(spacing: 0)
-//                                {
-//                                    Text(NSLocalizedString("Lab.", comment: ""))
-//                                        .frame(width: 80, height: heights![0])
-//                                        .border(Color.gray,width: 0.2)
-//                                        .foregroundColor(Color.gray)
-//
-//                                    ForEach(disciplines, id: \.id) { discipline in
-//                                        HStack(spacing: 0)
-//                                        {
-//                                            Text(discipline.Lesson[num].RealHours)
-//                                                .foregroundColor(Color.green)
-//                                            Text(" / ")
-//                                                .foregroundColor(.gray)
-//                                            Text(discipline.Lesson[num].Hours)
-//                                                .foregroundColor(discipline.Lesson[num].RealHours == discipline.Lesson[num].Hours ? .green : .red)
-//                                        }
-//                                        .frame(width: 80, height: heights![disciplines.firstIndex(of: discipline)!])
-//                                        .border(Color.gray,width: 0.2)
-//                                    }
-//                                    Spacer()
-//                                }
-//                            }
                         }
-                        .padding(.top, 3)
+                        .padding(.top, 5)
                         Spacer()
                     }
                 }
