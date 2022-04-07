@@ -11,6 +11,11 @@
 		C28A60FD27FDAE6400FA3649 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A60FC27FDAE6400FA3649 /* ContentView.swift */; };
 		C28A60FF27FDAE6700FA3649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28A60FE27FDAE6700FA3649 /* Assets.xcassets */; };
 		C28A610227FDAE6700FA3649 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C28A610127FDAE6700FA3649 /* Preview Assets.xcassets */; };
+		C28A610E27FDB77300FA3649 /* Method2.json in Resources */ = {isa = PBXBuildFile; fileRef = C28A610D27FDB77300FA3649 /* Method2.json */; };
+		C28A611127FDB83500FA3649 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28A611027FDB83500FA3649 /* ModelData.swift */; };
+		C2D1DD6E27FDE42500C496B2 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D1DD6D27FDE42500C496B2 /* Plan.swift */; };
+		C2D1DD7027FDF20F00C496B2 /* IndividualPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D1DD6F27FDF20F00C496B2 /* IndividualPlan.swift */; };
+		C2D1DD7927FEBF8600C496B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2D1DD7B27FEBF8600C496B2 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,13 @@
 		C28A60FC27FDAE6400FA3649 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C28A60FE27FDAE6700FA3649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C28A610127FDAE6700FA3649 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C28A610D27FDB77300FA3649 /* Method2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Method2.json; sourceTree = "<group>"; };
+		C28A611027FDB83500FA3649 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		C2D1DD6D27FDE42500C496B2 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		C2D1DD6F27FDF20F00C496B2 /* IndividualPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualPlan.swift; sourceTree = "<group>"; };
+		C2D1DD7A27FEBF8600C496B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C2D1DD7C27FEC04000C496B2 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C2D1DD7D27FEC04800C496B2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +63,11 @@
 		C28A60F927FDAE6400FA3649 /* IndividualStudyPlan */ = {
 			isa = PBXGroup;
 			children = (
-				C28A60FA27FDAE6400FA3649 /* IndividualStudyPlanApp.swift */,
-				C28A60FC27FDAE6400FA3649 /* ContentView.swift */,
+				C2D1DD7427FDFF2000C496B2 /* Helpers */,
+				C28A610F27FDB7A900FA3649 /* Model */,
+				C28A610C27FDB10100FA3649 /* App */,
+				C28A610B27FDB0F400FA3649 /* Views */,
+				C28A610A27FDB0E500FA3649 /* Resources */,
 				C28A60FE27FDAE6700FA3649 /* Assets.xcassets */,
 				C28A610027FDAE6700FA3649 /* Preview Content */,
 			);
@@ -65,6 +80,48 @@
 				C28A610127FDAE6700FA3649 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C28A610A27FDB0E500FA3649 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C28A610D27FDB77300FA3649 /* Method2.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C28A610B27FDB0F400FA3649 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C28A60FC27FDAE6400FA3649 /* ContentView.swift */,
+				C2D1DD6F27FDF20F00C496B2 /* IndividualPlan.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C28A610C27FDB10100FA3649 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C28A60FA27FDAE6400FA3649 /* IndividualStudyPlanApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C28A610F27FDB7A900FA3649 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C28A611027FDB83500FA3649 /* ModelData.swift */,
+				C2D1DD6D27FDE42500C496B2 /* Plan.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2D1DD7427FDFF2000C496B2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C2D1DD7B27FEBF8600C496B2 /* Localizable.strings */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +166,8 @@
 			knownRegions = (
 				en,
 				Base,
+				kk,
+				ru,
 			);
 			mainGroup = C28A60EE27FDAE6400FA3649;
 			productRefGroup = C28A60F827FDAE6400FA3649 /* Products */;
@@ -125,6 +184,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28A610E27FDB77300FA3649 /* Method2.json in Resources */,
+				C2D1DD7927FEBF8600C496B2 /* Localizable.strings in Resources */,
 				C28A610227FDAE6700FA3649 /* Preview Assets.xcassets in Resources */,
 				C28A60FF27FDAE6700FA3649 /* Assets.xcassets in Resources */,
 			);
@@ -137,18 +198,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D1DD7027FDF20F00C496B2 /* IndividualPlan.swift in Sources */,
 				C28A60FD27FDAE6400FA3649 /* ContentView.swift in Sources */,
 				C28A60FB27FDAE6400FA3649 /* IndividualStudyPlanApp.swift in Sources */,
+				C28A611127FDB83500FA3649 /* ModelData.swift in Sources */,
+				C2D1DD6E27FDE42500C496B2 /* Plan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C2D1DD7B27FEBF8600C496B2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2D1DD7A27FEBF8600C496B2 /* en */,
+				C2D1DD7C27FEC04000C496B2 /* kk */,
+				C2D1DD7D27FEC04800C496B2 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C28A610327FDAE6700FA3649 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -209,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
