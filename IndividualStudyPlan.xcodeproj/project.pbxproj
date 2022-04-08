@@ -17,6 +17,7 @@
 		C2D1DD7027FDF20F00C496B2 /* IndividualPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D1DD6F27FDF20F00C496B2 /* IndividualPlan.swift */; };
 		C2D1DD7927FEBF8600C496B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2D1DD7B27FEBF8600C496B2 /* Localizable.strings */; };
 		C2D1DD8228001F3200C496B2 /* DownloadPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D1DD8128001F3200C496B2 /* DownloadPdf.swift */; };
+		C2D1DD842800467300C496B2 /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D1DD832800467300C496B2 /* Table.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		C2D1DD7C27FEC04000C496B2 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C2D1DD7D27FEC04800C496B2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C2D1DD8128001F3200C496B2 /* DownloadPdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadPdf.swift; sourceTree = "<group>"; };
+		C2D1DD832800467300C496B2 /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				C28A60FC27FDAE6400FA3649 /* ContentView.swift */,
 				C2D1DD6F27FDF20F00C496B2 /* IndividualPlan.swift */,
+				C2D1DD832800467300C496B2 /* Table.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2D1DD8228001F3200C496B2 /* DownloadPdf.swift in Sources */,
+				C2D1DD842800467300C496B2 /* Table.swift in Sources */,
 				C2D1DD7027FDF20F00C496B2 /* IndividualPlan.swift in Sources */,
 				C28A60FD27FDAE6400FA3649 /* ContentView.swift in Sources */,
 				C28A60FB27FDAE6400FA3649 /* IndividualStudyPlanApp.swift in Sources */,
