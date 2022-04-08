@@ -16,6 +16,7 @@
 		C2D1DD6E27FDE42500C496B2 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D1DD6D27FDE42500C496B2 /* Plan.swift */; };
 		C2D1DD7027FDF20F00C496B2 /* IndividualPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D1DD6F27FDF20F00C496B2 /* IndividualPlan.swift */; };
 		C2D1DD7927FEBF8600C496B2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C2D1DD7B27FEBF8600C496B2 /* Localizable.strings */; };
+		C2D1DD8228001F3200C496B2 /* DownloadPdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D1DD8128001F3200C496B2 /* DownloadPdf.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		C2D1DD7A27FEBF8600C496B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C2D1DD7C27FEC04000C496B2 /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C2D1DD7D27FEC04800C496B2 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C2D1DD8128001F3200C496B2 /* DownloadPdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadPdf.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		C28A60F927FDAE6400FA3649 /* IndividualStudyPlan */ = {
 			isa = PBXGroup;
 			children = (
+				C2D1DD8028001F1300C496B2 /* Repository */,
 				C2D1DD7427FDFF2000C496B2 /* Helpers */,
 				C28A610F27FDB7A900FA3649 /* Model */,
 				C28A610C27FDB10100FA3649 /* App */,
@@ -110,7 +113,6 @@
 		C28A610F27FDB7A900FA3649 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C28A611027FDB83500FA3649 /* ModelData.swift */,
 				C2D1DD6D27FDE42500C496B2 /* Plan.swift */,
 			);
 			path = Model;
@@ -122,6 +124,15 @@
 				C2D1DD7B27FEBF8600C496B2 /* Localizable.strings */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C2D1DD8028001F1300C496B2 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C28A611027FDB83500FA3649 /* ModelData.swift */,
+				C2D1DD8128001F3200C496B2 /* DownloadPdf.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D1DD8228001F3200C496B2 /* DownloadPdf.swift in Sources */,
 				C2D1DD7027FDF20F00C496B2 /* IndividualPlan.swift in Sources */,
 				C28A60FD27FDAE6400FA3649 /* ContentView.swift in Sources */,
 				C28A60FB27FDAE6400FA3649 /* IndividualStudyPlanApp.swift in Sources */,

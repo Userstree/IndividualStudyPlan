@@ -17,7 +17,8 @@ struct ContentView: View {
         GeometryReader { proxy in
             VStack(alignment: .center, spacing: 0)
             {
-                HStack {
+                HStack(alignment: .center)
+                {
                     Spacer()
                     Button(
                         action: {
@@ -52,8 +53,8 @@ struct ContentView: View {
                     )
                     Spacer()
                 }
-                .padding(.top, 45)
                 .padding(.bottom, 20)
+                .padding(.top, 45)
                 .frame(maxWidth: .infinity)
                 .background(LinearGradient(colors: [Color.red.opacity(0.9), Color.red.opacity(0.6)], startPoint: .leading, endPoint: .trailing))
                 .ignoresSafeArea()
@@ -122,9 +123,9 @@ struct ContentView: View {
                 
                 Table(tab: $currentTab, disciplines: modelData.planData.Semesters[currentTab].Disciplines)
                 
-                Spacer()
             }
             .navigationBarHidden(true)
+            
         }
     }
 }
